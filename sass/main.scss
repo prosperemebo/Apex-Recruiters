@@ -8,5 +8,18 @@
 @import 'components/btn';
 
 :root {
-  --side-margins-sm: clamp(3rem, 5vw + 1rem, 15rem);
+  --side-margins-sm: clamp(1rem, 5vw + 1rem, 15rem);
+  --header-height: calc(100vh - 10rem);
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    --header-height: calc(100vh - 3rem);
+  }
+
+  @media only screen and (max-height: 700px) {
+    --header-height: 85rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    --header-height: 85rem;
+  }
 }

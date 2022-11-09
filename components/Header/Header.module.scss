@@ -1,9 +1,10 @@
 @import '../../sass/abstracts/variables';
 
 .header {
-  height: calc(100vh - 12rem);
   color: $color-primary;
   position: relative;
+  height: calc(100vh - 10rem);
+  margin-bottom: 150rem;
 
   @media only screen and (max-width: $layout-breakpoint-small) {
     height: calc(100vh - 5rem);
@@ -45,7 +46,7 @@
   .contentBox {
     margin: 0 var(--side-margins-sm);
     position: absolute;
-    top: 50%;
+    top: 55%;
     transform: translateY(-50%);
     max-width: 100rem;
 
@@ -59,6 +60,7 @@
       a {
         &:not(:last-child) {
           margin-right: 3rem;
+          margin-bottom: 2rem;
         }
       }
     }
