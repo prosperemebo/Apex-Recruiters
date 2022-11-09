@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&family=PT+Serif:wght@400;700&display=swap');
+
+html {
+  font-size: 62.5%;
+  line-height: 1.25;
+
+  body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+.heading-primary {
+  font-size: 5.5rem;
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.heading-secondary {
+  font-family: 'PT Serif';
+  font-weight: 700;
+  font-size: 35rem;
+}
+
+.heading-tertiary {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+.paragraph {
+  font-family: 'Nunito' sans-serif;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 1.4em;
+  color: $color-secondary;
+
+  &-bg {
+    font-size: 3rem;
+  }
+
+  // @media only screen and (max-width: $layout-breakpoint-phone) {
+  //   font-size: 1.5rem;
+  // }
+}
+
+// p,
+// span {
+//   font-size: 1.8rem;
+// }
+
+a {
+  text-decoration: none;
+}

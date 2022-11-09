@@ -1,0 +1,66 @@
+@import '../../sass/abstracts/variables';
+
+.header {
+  height: calc(100vh - 12rem);
+  color: $color-primary;
+  position: relative;
+
+  @media only screen and (max-width: $layout-breakpoint-small) {
+    height: calc(100vh - 5rem);
+  }
+
+  @media only screen and (max-height: 700px) {
+    height: 85rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 85rem;
+  }
+
+  figure {
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .contentBox {
+    margin: 0 var(--side-margins-sm);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 100rem;
+
+    p {
+      color: $color-primary;
+    }
+
+    .cta {
+      margin-top: 5rem;
+
+      a {
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+}

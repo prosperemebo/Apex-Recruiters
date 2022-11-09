@@ -1,0 +1,12 @@
+@import 'abstracts/variables';
+@import 'abstracts/breakpoints';
+
+@import 'base/global';
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'components/btn';
+
+:root {
+  --side-margins-sm: clamp(3rem, 5vw + 1rem, 15rem);
+}

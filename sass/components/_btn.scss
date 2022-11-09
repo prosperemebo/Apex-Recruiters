@@ -1,0 +1,48 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 2rem 4rem;
+    display: inline-block;
+    border-radius: 8px;
+    font-family: 'PT Serif';
+    font-weight: 700;
+    font-size: 24px;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-primary {
+    background-color: $color-accent;
+    color: $color-primary;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 3px solid $color-accent !important;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba($color-accent, 0.2);
+    }
+  }
+
+  &-outline {
+    color: $color-primary;
+    border: 3px solid $color-accent !important;
+    background-color: transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba($color-accent, 0.2);
+      background-color: $color-accent;
+    }
+  }
+}
