@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header/Home';
 import withTransition from '../components/HOC/withTransition';
+import Features from '../components/Pages/Home/Features';
 
 const index = function Home() {
   return (
@@ -16,6 +17,7 @@ const index = function Home() {
         <link rel='icon' href='/favicon.jpg' />
       </Head>
       <Header />
+      <Features />
     </div>
   );
 };

@@ -17,16 +17,6 @@
     box-shadow: 0 10px 20px rgba($color-secondary, 0.3);
     padding: 1rem var(--side-margins-sm);
 
-    // @include respond(tab-land) {
-    //   padding: 1rem 2rem;
-    // }
-
-    // @include respond(tab-port) {
-    //   padding: 0;
-    //   background-color: transparent;
-    //   box-shadow: none;
-    // }
-
     .logo {
       img {
         width: 8rem;

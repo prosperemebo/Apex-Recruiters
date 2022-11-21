@@ -21,12 +21,9 @@ const Nav = () => {
   }, []);
 
   const openNavHandler = useCallback((event) => {
-    if (event.target.matches(`.${classes.backdrop}`)) {
-      return false;
-    }
-
     if (
       event.target.closest(`.${classes.navBtn}`) ||
+      event.target.closest(`.${classes.backdrop}`) ||
       event.target.matches(`.${classes.navList}`)
     ) {
       setIsNavOpen((value) => !value);
@@ -61,7 +58,7 @@ const Nav = () => {
 
       <div className={classes.backdrop} onClick={openNavHandler}></div>
 
-      <ul className={classes.navList} onClick={openNavHandler}>
+      <ul className={classes.navList}>
         <li className={`${classes.navItem} ${classes.navLink}`}>
           <Link href='/'>Home</Link>
         </li>
