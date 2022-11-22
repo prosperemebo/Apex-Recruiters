@@ -55,4 +55,9 @@
     font-size: 1.8rem !important;
     padding: 1.3rem 3rem !important;
   }
+
+  &.yellow {
+    background-color: $color-yellow;
+    border-color: $color-yellow !important;
+  }
 }

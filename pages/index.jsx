@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header/Home';
 import withTransition from '../components/HOC/withTransition';
+import Composition from '../components/Pages/Home/Composition';
 import Features from '../components/Pages/Home/Features';
 
 const index = function Home() {
@@ -18,6 +19,7 @@ const index = function Home() {
       </Head>
       <Header />
       <Features />
+      <Composition />
     </div>
   );
 };
