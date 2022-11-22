@@ -48,6 +48,7 @@ const Testimonials = () => {
               spaceBetween: 40,
             },
             1200: {
+              slidesPerView: 2.3,
               spaceBetween: 100,
             },
           }}

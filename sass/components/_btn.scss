@@ -39,7 +39,7 @@
 
   &-outline {
     color: $color-primary;
-    border: 1px solid $color-accent !important;
+    border: 2px solid $color-accent !important;
     background-color: transparent;
     transition: transform 0.2s ease, box-shadow 0.2s ease,
       background-color 0.2s ease;
@@ -48,6 +48,12 @@
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba($color-accent, 0.2);
       background-color: $color-accent;
+    }
+
+    &.white {
+      background-color: transparent !important;
+      border-color: $white;
+      color: $white !important;
     }
   }
 
@@ -59,5 +65,11 @@
   &.yellow {
     background-color: $color-yellow;
     border-color: $color-yellow !important;
+  }
+
+  &.white {
+    background-color: $white;
+    border-color: $white !important;
+    color: $color-green;
   }
 }

@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import Header from '../components/Header/Home';
 import withTransition from '../components/HOC/withTransition';
+import Clients from '../components/Pages/Home/Clients';
 import Composition from '../components/Pages/Home/Composition';
 import Features from '../components/Pages/Home/Features';
 import Testimonials from '../components/Pages/Home/Testimonial';
 
 const index = function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>
           Apex Recruiters - Connecting Organisations with Great Talents
@@ -22,7 +23,8 @@ const index = function Home() {
       <Features />
       <Composition />
       <Testimonials />
-    </div>
+      <Clients />
+    </>
   );
 };
 

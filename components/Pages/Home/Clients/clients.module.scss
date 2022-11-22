@@ -1,0 +1,26 @@
+@import '../../../../sass/abstracts/breakpoints';
+
+.clients {
+  margin: 0rem var(--side-margins-sm) 15rem;
+  text-align: center;
+
+  .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10rem;
+
+    figure {
+      flex: 1;
+    }
+
+    img {
+      width: 70%;
+      height: auto;
+
+      @include media('<=phone') {
+        width: 80%;
+      }
+    }
+  }
+}

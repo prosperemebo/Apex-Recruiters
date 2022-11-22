@@ -18,6 +18,14 @@
     height: 85rem;
   }
 
+  &.green {
+    background-color: $color-green;
+  }
+
+  &.dark {
+    background-color: $black;
+  }
+
   figure {
     position: absolute;
     display: inline-block;
@@ -46,7 +54,7 @@
   .contentBox {
     margin: 0 var(--side-margins-sm);
     position: absolute;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
     max-width: 100rem;
 

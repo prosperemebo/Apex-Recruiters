@@ -66,7 +66,7 @@ const Nav = () => {
           <Link href='/about'>About Us</Link>
         </li>
         <li className={`${classes.navItem} ${classes.navLink}`}>
-          <Link href='/'>Our Services</Link>
+          <Link href='/services'>Our Services</Link>
         </li>
         <li className={`${classes.navItem} ${classes.navLink}`}>
           <Link href='/'>Media Hub</Link>
