@@ -26,7 +26,7 @@ const Testimonials = () => {
         <Swiper
           effect='coverflow'
           grabCursor={true}
-          slidesPerView={'2.5'}
+          slidesPerView={'2'}
           centeredSlides={true}
           spaceBetween={100}
           loop={true}
@@ -37,6 +37,19 @@ const Testimonials = () => {
             depth: 150,
             //   modifier: 1,
             slideShadows: false,
+          }}
+          breakpoints={{
+            300: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
+            },
+            800: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1200: {
+              spaceBetween: 100,
+            },
           }}
           autoplay={{
             delay: 5000,
