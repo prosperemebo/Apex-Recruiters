@@ -1,4 +1,5 @@
 @import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/breakpoints';
 
 .navigation {
   position: fixed;
@@ -25,7 +26,7 @@
   }
 
   .logo {
-    flex: 0.6;
+    flex: 0.8;
 
     img {
       height: auto;
@@ -40,10 +41,14 @@
   }
 
   .navList {
-    flex: 2;
+    flex: 1.2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media('<=desktop') {
+      flex: 2;
+    }
 
     .navItem {
       &.navLink {
