@@ -14,8 +14,20 @@
     height: 85rem;
   }
 
-  @media only screen and (max-width: 500px) {
-    height: 85rem;
+  // @media only screen and (max-width: 500px) {
+  //   height: 85rem;
+  // }
+
+  &.short {
+    height: calc(55vh - 10rem);
+
+    @media only screen and (max-width: $layout-breakpoint-small) {
+      height: calc(60vh - 5rem);
+    }
+
+    @media only screen and (max-height: 700px) {
+      height: 35rem;
+    }
   }
 
   &.green {

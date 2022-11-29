@@ -69,7 +69,7 @@ const Nav = () => {
           <Link href='/services'>Our Services</Link>
         </li>
         <li className={`${classes.navItem} ${classes.navLink}`}>
-          <Link href='/'>Media Hub</Link>
+          <Link href='/media-hub'>Media Hub</Link>
         </li>
         <li className={`${classes.navItem} ${classes.navLink}`}>
           <Link href='/'>Contact</Link>
