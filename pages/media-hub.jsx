@@ -2,6 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import Header from '../components/Header/MediaHub';
 import withTransition from '../components/HOC/withTransition';
+import ImageComp from '../components/Pages/MediaHub/ImageComp';
 import Talents from '../components/Pages/MediaHub/Talents';
 
 const mediaHub = () => {
@@ -17,6 +18,7 @@ const mediaHub = () => {
       </Head>
       <Header />
       <Talents />
+      <ImageComp />
     </>
   );
 };

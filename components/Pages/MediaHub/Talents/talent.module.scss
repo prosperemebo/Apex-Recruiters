@@ -1,0 +1,75 @@
+@import '/sass/abstracts/variables';
+@import '/sass/abstracts/breakpoints';
+
+.main {
+  margin: 0 var(--side-margins-sm) 15rem;
+  padding-top: 10rem;
+
+  .head {
+    margin-bottom: 5rem;
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .talents {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(40rem, 1fr));
+    grid-auto-rows: min(80rem, 110vh);
+    grid-gap: 5rem;
+
+    @include media('<=desktop') {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    }
+
+    @include media('<=tablet') {
+      grid-template-columns: repeat(2, minmax(25rem, 1fr));
+    }
+
+    @media only screen and (max-width: $layout-breakpoint-phone) {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 80rem;
+      grid-gap: 0rem;
+    }
+
+    .talent {
+      figure {
+        width: 100%;
+        height: 40rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        margin-bottom: 3rem;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h3 {
+        font-family: 'Nunito', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-family: 'PT Serif', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
