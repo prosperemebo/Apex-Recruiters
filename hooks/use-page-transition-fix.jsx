@@ -9,7 +9,7 @@ const routeChange = () => {
     elements.forEach((elem) => elem.removeAttribute('media'));
     setTimeout(() => {
       elements.forEach((elem) => elem.remove());
-    }, OPACITY_EXIT_DURATION * 1000);
+    }, OPACITY_EXIT_DURATION * 500);
   };
   tempFix();
 };
