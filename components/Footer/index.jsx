@@ -79,24 +79,40 @@ const Footer = () => {
             </li>
             <ul className={classes.socials}>
               <li>
-                <Link href='/'>
+                <a
+                  href='https://web.facebook.com/apexrecruiterng'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <FacebookIC />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href='/'>
+                <a
+                  href='https://twitter.com/apexrecruiterng'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <TwitterIC />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href='/'>
+                <a
+                  href='https://www.instagram.com/apexrecruiterng/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <InstagramIC />
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href='/'>
+                <a
+                  href='https://www.linkedin.com/company/apex-recruiter-ltd'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <LinkedinIC />
-                </Link>
+                </a>
               </li>
             </ul>
           </ul>
