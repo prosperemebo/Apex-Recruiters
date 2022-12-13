@@ -1,5 +1,5 @@
 import { useFormik } from 'formik';
-import classes from './Form.module.scss';
+import classes from './Forms.module.scss';
 import * as Yup from 'yup';
 
 const ContactForm = () => {
@@ -11,8 +11,9 @@ const ContactForm = () => {
       subject: '',
       message: '',
     },
+    onSubmit: () => {},
     validationSchema: Yup.object({
-      fullName: Yup.string().required('Please enter your First Name!'),
+      fullName: Yup.string().required('Please enter your Full Name!'),
       subject: Yup.string().required('Please enter a subject!'),
       message: Yup.string().required('Please enter a message!'),
       email: Yup.string()
@@ -23,7 +24,7 @@ const ContactForm = () => {
   });
 
   return (
-    <form className={classes.main}>
+    <form className={classes.main} onSubmit={formik.handleSubmit}>
       <div className='apx-fields'>
         <div className='apx-field'>
           <input

@@ -20,7 +20,7 @@ const Header = () => {
         </p>
 
         <div className={classes.cta}>
-          <Link href='/' legacyBehavior>
+          <Link href='/find-role' legacyBehavior>
             <a className='btn btn-primary white'>Find Role</a>
           </Link>
           <Link href='/' legacyBehavior>

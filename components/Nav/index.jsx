@@ -75,7 +75,7 @@ const Nav = () => {
           <Link href='/contact'>Contact</Link>
         </li>
         <li className={`${classes.navItem}`}>
-          <Link href='/' legacyBehavior>
+          <Link href='/find-role' legacyBehavior>
             <a className='btn btn-sm btn-primary'>Find Role</a>
           </Link>
         </li>

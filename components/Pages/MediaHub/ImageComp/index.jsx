@@ -15,7 +15,7 @@ const ImageComp = () => {
         </p>
 
         <div className={classes.cta}>
-          <Link href='/' legacyBehavior>
+          <Link href='/find-role' legacyBehavior>
             <a className='btn btn-primary'>Find Role</a>
           </Link>
           <Link href='/' legacyBehavior>

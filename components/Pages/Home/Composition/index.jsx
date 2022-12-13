@@ -30,7 +30,7 @@ const Composition = () => {
             make sure you get the most out of your career—and we&apos;ll do
             whatever it takes to help you achieve that.
           </p>
-          <Link href='/' legacyBehavior>
+          <Link href='/find-role' legacyBehavior>
             <a className='btn btn-primary yellow'>Find Role</a>
           </Link>
         </div>
