@@ -72,7 +72,7 @@ const Nav = () => {
           <Link href='/media-hub'>Media Hub</Link>
         </li>
         <li className={`${classes.navItem} ${classes.navLink}`}>
-          <Link href='/'>Contact</Link>
+          <Link href='/contact'>Contact</Link>
         </li>
         <li className={`${classes.navItem}`}>
           <Link href='/' legacyBehavior>

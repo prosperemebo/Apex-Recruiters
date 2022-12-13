@@ -18,6 +18,24 @@
   //   height: 85rem;
   // }
 
+  &.center {
+    .contentBox {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      @media only screen and (max-height: 700px) {
+        max-width: unset !important;
+        width: 95% !important;
+      }
+    }
+  }
+
   &.short {
     height: calc(55vh - 10rem);
 
@@ -27,6 +45,18 @@
 
     @media only screen and (max-height: 700px) {
       height: 35rem;
+    }
+  }
+
+  &.medium {
+    height: calc(85vh - 10rem);
+
+    @media only screen and (max-width: $layout-breakpoint-small) {
+      height: calc(75vh - 5rem);
+    }
+
+    @media only screen and (max-height: 700px) {
+      height: 65rem;
     }
   }
 
@@ -60,6 +90,13 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+  }
+
+  .figComp {
+    img {
+      width: 18rem;
+      height: auto;
     }
   }
 

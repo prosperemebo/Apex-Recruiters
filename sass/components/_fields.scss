@@ -1,0 +1,45 @@
+.apx-input {
+  border-radius: 0.5rem;
+  border: 1.5px solid rgba($color-secondary, 0.5);
+  background-color: transparent;
+  padding: 1.5rem 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+
+  &.message {
+    min-height: 25rem;
+  }
+
+  &:focus {
+    border: 2.5px solid rgba($color-secondary, 0.8);
+    outline: none;
+  }
+}
+
+.apx-field {
+  width: 100%;
+  margin-bottom: 2rem;
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+
+    @media only screen and (max-width: $layout-breakpoint-small) {
+      margin-right: 0;
+    }
+  }
+}
+
+.apx-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: $layout-breakpoint-phone) {
+    flex-direction: column;
+  }
+}
+
+textarea {
+  font-family: 'Nunito', sans-serif !important;
+}

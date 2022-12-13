@@ -12,11 +12,13 @@
     "@svgr/webpack": "^6.5.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.2",
+    "formik": "^2.2.9",
     "framer-motion": "^7.6.5",
     "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.56.1",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "yup": "^0.32.11"
   }
 }
