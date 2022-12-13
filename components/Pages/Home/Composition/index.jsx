@@ -46,7 +46,7 @@ const Composition = () => {
             clients to succeed, we provide them with top-notch talent, so they
             can focus on what matters most: growing their business.
           </p>
-          <Link href='/' legacyBehavior>
+          <Link href='/find-talent' legacyBehavior>
             <a className='btn btn-primary yellow'>Find Talent</a>
           </Link>
         </div>

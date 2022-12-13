@@ -3,20 +3,19 @@ import classes from './Forms.module.scss';
 import * as Yup from 'yup';
 import Countries from './Countries';
 
-const SubmitCVForm = () => {
+const FindTalentForm = () => {
   const formik = useFormik({
     initialValues: {
       firstName: '',
       lastName: '',
+      nameOfOrganisation: '',
       email: '',
       phone: '',
-      gender: '',
-      nationality: '',
-      qualification: '',
-      preferredJobTitle: '',
-      knowledgeReference: '',
-      message: '',
-      cv: '',
+      jobTitle: '',
+      jobLocation: '',
+      jobType: '',
+      workType: '',
+      jobDescription: '',
     },
     onSubmit: (values) => {
       console.log(values);
@@ -24,18 +23,20 @@ const SubmitCVForm = () => {
     validationSchema: Yup.object({
       firstName: Yup.string().required('Please enter your First Name!'),
       lastName: Yup.string().required('Please enter your Last Name!'),
-      phone: Yup.string().required('Please enter your Phone Number!'),
-      gender: Yup.string().required('Please select your appropriate gender!'),
-      nationality: Yup.string().required('Please select your country!'),
-      preferredJobTitle: Yup.string().required(
-        'Please specify your Preferred Job Title!'
+      nameOfOrganisation: Yup.string().required(
+        'Please enter your Name Of Organisation!'
       ),
-      knowledgeReference: Yup.string().required('This input is required!'),
-      qualification: Yup.string().required('Please select a qualification!'),
+      phone: Yup.string().required('Please enter your Phone Number!'),
+      jobTitle: Yup.string().required('Please specify your required job!'),
+      jobLocation: Yup.string().required('Please specify job location!'),
+      jobType: Yup.string().required('Please select Job Type!'),
+      workType: Yup.string().required('Please select work type!'),
       email: Yup.string()
         .required('Please enter your Email!')
         .email('Email address is Invalid!'),
-      cv: Yup.mixed().required('Please upload your CV!'),
+      jobDescription: Yup.mixed().required(
+        'Please upload your Job Description!'
+      ),
     }),
     validateOnChange: true,
   });
@@ -112,41 +113,19 @@ const SubmitCVForm = () => {
       </div>
       <div className='apx-fields'>
         <div className='apx-field'>
-          <select
-            type='gender'
+          <input
+            type='text'
             className='apx-input'
-            placeholder='Gender*'
-            name='gender'
+            placeholder='Name Of Organisation*'
+            name='nameOfOrganisation'
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
-            value={formik.values.gender}
-          >
-            <option value=''>Gender</option>
-            <option value='Male'>Male</option>
-            <option value='Female'>Female</option>
-            <option value='Prefer not to Say'>Prefer not to Say</option>
-          </select>
-          {formik.touched.gender && formik.errors.gender ? (
+            value={formik.values.nameOfOrganisation}
+          />
+          {formik.touched.nameOfOrganisation &&
+          formik.errors.nameOfOrganisation ? (
             <small className='small-text error-text'>
-              {formik.errors.gender}
-            </small>
-          ) : null}
-        </div>
-        <div className='apx-field'>
-          <select
-            type='nationality'
-            className='apx-input'
-            placeholder='Nationality*'
-            name='nationality'
-            onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
-            value={formik.values.nationality}
-          >
-            <Countries />
-          </select>
-          {formik.touched.nationality && formik.errors.nationality ? (
-            <small className='small-text error-text'>
-              {formik.errors.nationality}
+              {formik.errors.nameOfOrganisation}
             </small>
           ) : null}
         </div>
@@ -156,85 +135,94 @@ const SubmitCVForm = () => {
           <input
             type='text'
             className='apx-input'
-            placeholder='Preferred Job Title*'
-            name='preferredJobTitle'
+            placeholder='Job Title*'
+            name='jobTitle'
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
-            value={formik.values.preferredJobTitle}
+            value={formik.values.jobTitle}
           />
-          {formik.touched.preferredJobTitle &&
-          formik.errors.preferredJobTitle ? (
+          {formik.touched.jobTitle && formik.errors.jobTitle ? (
             <small className='small-text error-text'>
-              {formik.errors.preferredJobTitle}
+              {formik.errors.jobTitle}
             </small>
           ) : null}
         </div>
         <div className='apx-field'>
-          <select
-            type='qualification'
-            className='apx-input'
-            placeholder='Qualification*'
-            name='qualification'
-            onBlur={formik.handleBlur}
-            onChange={formik.handleChange}
-            value={formik.values.qualification}
-          >
-            <option value=''>Qualification</option>
-            <option value='Under Grad'>Under Grad</option>
-            <option value='OND'>OND</option>
-            <option value='HND'>HND</option>
-            <option value='Masters'>Masters</option>
-            <option value='BSC'>BSC</option>
-          </select>
-          {formik.touched.qualification && formik.errors.qualification ? (
-            <small className='small-text error-text'>
-              {formik.errors.qualification}
-            </small>
-          ) : null}
-        </div>
-      </div>
-      <div className='apx-fields'>
-        <div className='apx-field'>
-          <select
+          <input
             type='text'
             className='apx-input'
-            placeholder='How did you hear about Apex Recruiter*'
-            name='knowledgeReference'
+            placeholder='Job Location*'
+            name='jobLocation'
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
-            value={formik.values.knowledgeReference}
-          >
-            <option value=''>How did you hear about Apex Recruiter</option>
-            <option value='Instagram'>Instagram</option>
-            <option value='Twitter'>Twitter</option>
-            <option value='Whatsapp'>Whatsapp</option>
-            <option value='Email'>Email</option>
-            <option value='Word of mouth'>Word of mouth</option>
-            <option value='Website'>Website</option>
-            <option value='Other'>Other</option>
-          </select>
-          {formik.touched.knowledgeReference &&
-          formik.errors.knowledgeReference ? (
+            value={formik.values.jobLocation}
+          />
+          {formik.touched.jobLocation && formik.errors.jobLocation ? (
             <small className='small-text error-text'>
-              {formik.errors.knowledgeReference}
+              {formik.errors.jobLocation}
             </small>
           ) : null}
         </div>
       </div>
       <div className='apx-fields'>
         <div className='apx-field'>
-          <p>Upload your CV</p>
+          <select
+            className='apx-input'
+            placeholder='Job Type*'
+            name='jobType'
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            value={formik.values.JobType}
+          >
+            <option value=''>Job Type</option>
+            <option value='Full-time'>Full-time</option>
+            <option value='Part-time'>Part-time</option>
+            <option value='Contract'>Contract</option>
+            <option value='Temporary'>Temporary</option>
+            <option value='Volunteer'>Volunteer</option>
+            <option value='Intership'>Intership</option>
+          </select>
+          {formik.touched.jobType && formik.errors.jobType ? (
+            <small className='small-text error-text'>
+              {formik.errors.jobType}
+            </small>
+          ) : null}
+        </div>
+        <div className='apx-field'>
+          <select
+            className='apx-input'
+            name='workType'
+            onBlur={formik.handleBlur}
+            onChange={formik.handleChange}
+            value={formik.values.workType}
+          >
+            <option value=''>Work Place Type</option>
+            <option value='Remote'>Remote</option>
+            <option value='Hybrid'>Hybrid</option>
+            <option value='Onsite'>Onsite</option>
+          </select>
+          {formik.touched.workType && formik.errors.workType ? (
+            <small className='small-text error-text'>
+              {formik.errors.workType}
+            </small>
+          ) : null}
+        </div>
+      </div>
+      <div className='apx-fields'>
+        <div className='apx-field'>
+          <p>Upload Job Description</p>
           <input
             type='file'
             className='apx-input'
-            placeholder='Upload CV*'
-            name='cv'
+            name='jobDescription'
             onBlur={formik.handleBlur}
             onChange={formik.handleChange}
-            value={formik.values.cv}
+            value={formik.values.jobDescription}
           />
-          {formik.touched.cv && formik.errors.cv ? (
-            <small className='small-text error-text'>{formik.errors.cv}</small>
+          {formik.touched.jobDescription && formik.errors.jobDescription ? (
+            <small className='small-text error-text'>
+              {formik.errors.jobDescription}
+            </small>
           ) : null}
         </div>
       </div>
@@ -243,4 +231,4 @@ const SubmitCVForm = () => {
   );
 };
 
-export default SubmitCVForm;
+export default FindTalentForm;

@@ -3,7 +3,7 @@ import SubmitCVForm from '../components/Forms/SubmitCVForm';
 import Header from '../components/Header/FindRole';
 import withTransition from '../components/HOC/withTransition';
 
-const contact = () => {
+const findRole = () => {
   return (
     <>
       <Head>
@@ -15,4 +15,4 @@ const contact = () => {
   );
 };
 
-export default withTransition(contact);
+export default withTransition(findRole);

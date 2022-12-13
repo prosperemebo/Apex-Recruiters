@@ -23,7 +23,7 @@ const Header = () => {
           <Link href='/find-role' legacyBehavior>
             <a className='btn btn-primary white'>Find Role</a>
           </Link>
-          <Link href='/' legacyBehavior>
+          <Link href='/find-talent' legacyBehavior>
             <a className='btn btn-outline white'>Find Talent</a>
           </Link>
         </div>
