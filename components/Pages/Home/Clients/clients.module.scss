@@ -16,7 +16,7 @@
 
     figure {
       flex: 1;
-      margin: 0rem 1rem;
+      margin: 0rem 2rem;
     }
 
     img {
@@ -25,7 +25,8 @@
       object-fit: contain;
 
       @include media('<=phone') {
-        width: 20rem;
+        width: 15rem;
+        height: 12rem;
       }
     }
   }
