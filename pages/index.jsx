@@ -22,7 +22,7 @@ const index = function Home() {
       <Header />
       <Features />
       <Composition />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Clients />
     </>
   );
