@@ -21,7 +21,7 @@ const Footer = () => {
             <li>
               <Link href='/'>Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/'>Home</Link>
             </li>
             <li>
@@ -29,13 +29,13 @@ const Footer = () => {
             </li>
             <li>
               <Link href='/'>Home</Link>
-            </li>
+            </li> */}
           </ul>
           <ul className={classes.menu}>
             <li>
               <Link href='/'>Contact Us</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/'>Home</Link>
             </li>
             <li>
@@ -43,13 +43,13 @@ const Footer = () => {
             </li>
             <li>
               <Link href='/'>Home</Link>
-            </li>
+            </li> */}
           </ul>
           <ul className={classes.menu}>
             <li>
               <Link href='/'>Our Services</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/'>Home</Link>
             </li>
             <li>
@@ -57,13 +57,13 @@ const Footer = () => {
             </li>
             <li>
               <Link href='/'>Home</Link>
-            </li>
+            </li> */}
           </ul>
           <ul className={classes.menu}>
             <li>
               <Link href='/'>Media Hub</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/'>Home</Link>
             </li>
             <li>
@@ -71,7 +71,7 @@ const Footer = () => {
             </li>
             <li>
               <Link href='/'>Home</Link>
-            </li>
+            </li> */}
           </ul>
           <ul className={`${classes.menu} ${classes.socials}`}>
             <li>

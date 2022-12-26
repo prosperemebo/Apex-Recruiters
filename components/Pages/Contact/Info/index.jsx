@@ -9,7 +9,7 @@ const Info = () => {
     <div className={classes.main}>
       <div className={classes.info}>
         <LocationIC />
-        <p>38, Folarin Street, Magodo phase 1, Lagos</p>
+        <p>1 Iya Omolere Close, Off Celestial Way Ogudu, Lagos, Nigeria.</p>
       </div>
       <div className={classes.info}>
         <MailIC />

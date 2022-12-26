@@ -1,0 +1,53 @@
+@import '../../sass/abstracts/breakpoints';
+
+.composition {
+  margin: 12rem var(--side-margins-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media('<=tablet') {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  figure {
+    flex: 0.8;
+    padding: 0 5rem;
+
+    @include media('<=tablet') {
+      padding: 0;
+      margin-bottom: 3rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  &.rtl {
+    figure {
+      order: 2;
+    }
+
+    .content {
+      order: 1;
+    }
+  }
+
+  @include media('<=tablet') {
+    figure {
+      order: 1 !important;
+    }
+
+    .content {
+      order: 2 !important;
+    }
+  }
+}

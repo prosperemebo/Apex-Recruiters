@@ -1,0 +1,14 @@
+{
+  "/_app": "pages/_app.js",
+  "/about": "pages/about.html",
+  "/_error": "pages/_error.js",
+  "/find-role": "pages/find-role.html",
+  "/find-talent": "pages/find-talent.html",
+  "/": "pages/index.html",
+  "/media-hub": "pages/media-hub.html",
+  "/services": "pages/services.html",
+  "/_document": "pages/_document.js",
+  "/contact": "pages/contact.html",
+  "/api/hello": "pages/api/hello.js",
+  "/404": "pages/404.html"
+}
