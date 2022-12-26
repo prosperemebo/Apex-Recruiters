@@ -74,11 +74,18 @@ const Nav = () => {
         <li className={`${classes.navItem} ${classes.navLink}`}>
           <Link href='/contact'>Contact</Link>
         </li>
-        <li className={`${classes.navItem}`}>
-          <Link href='/find-role' legacyBehavior>
-            <a className='btn btn-sm btn-primary'>Find Role</a>
-          </Link>
-        </li>
+        <ul className={classes.cta}>
+          <li>
+            <Link href='/find-role' legacyBehavior>
+              <a className='btn btn-sm btn-primary'>Find Role</a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/find-talent' legacyBehavior>
+              <a className='btn btn-sm btn-primary'>Find Talent</a>
+            </Link>
+          </li>
+        </ul>
       </ul>
     </nav>
   );

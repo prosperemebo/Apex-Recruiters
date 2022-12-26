@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 3rem var(--side-margins-sm);
+  padding: 3rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@
   &.navScrolled {
     background-color: $black;
     box-shadow: 0 10px 20px rgba($color-secondary, 0.3);
-    padding: 1rem var(--side-margins-sm);
+    padding: 1rem 2rem;
 
     .logo {
       img {
@@ -41,7 +41,7 @@
   }
 
   .navList {
-    flex: 1.2;
+    flex: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,9 +72,19 @@
         }
       }
     }
+
+    .cta {
+      display: flex;
+      justify-content: space-between;
+
+      a,
+      button {
+        margin-right: 1rem;
+      }
+    }
   }
 
-  @media only screen and (max-width: $layout-breakpoint-small) {
+  @media only screen and (max-width: 1200px) {
     .navBtn {
       display: block;
       height: 4.5rem;
@@ -123,10 +133,11 @@
       background-color: $black;
       justify-content: flex-start;
       align-items: flex-start;
-      padding-top: 12rem;
+      padding-top: 3rem;
       padding-left: var(--side-margins-sm);
       transform-origin: right;
       transition: min-width 0.5s ease, left 0.5s ease;
+      overflow-y: scroll;
 
       li {
         margin: 3rem 0;
@@ -158,7 +169,7 @@
 
       .logo {
         position: relative;
-        z-index: 100;
+        // z-index: 100;
       }
 
       .navBtn {
