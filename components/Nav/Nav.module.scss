@@ -77,6 +77,14 @@
       display: flex;
       justify-content: space-between;
 
+      @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+
+        li {
+          margin: 1rem 0 !important;
+        }
+      }
+
       a,
       button {
         margin-right: 1rem;
