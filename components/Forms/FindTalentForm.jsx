@@ -2,8 +2,11 @@ import { useFormik } from 'formik';
 import classes from './Forms.module.scss';
 import * as Yup from 'yup';
 import Countries from './Countries';
+import { useRef } from 'react';
 
 const FindTalentForm = () => {
+  const form = useRef();
+
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -18,7 +21,7 @@ const FindTalentForm = () => {
       jobDescription: '',
     },
     onSubmit: (values) => {
-      console.log(values);
+      form.current.submit();
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required('Please enter your First Name!'),
@@ -42,7 +45,14 @@ const FindTalentForm = () => {
   });
 
   return (
-    <form className={classes.main} onSubmit={formik.handleSubmit}>
+    <form
+      className={classes.main}
+      onSubmit={formik.handleSubmit}
+      action='backend/talents.php'
+      ref={form}
+      method='POST'
+      encType='multipart/form-data'
+    >
       <div className='apx-fields'>
         <div className='apx-field'>
           <input
