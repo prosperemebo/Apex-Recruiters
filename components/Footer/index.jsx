@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
           <ul className={classes.menu}>
             <li>
-              <Link href='/'>Contact Us</Link>
+              <Link href='/contact'>Contact Us</Link>
             </li>
             {/* <li>
               <Link href='/'>Home</Link>
@@ -47,7 +47,7 @@ const Footer = () => {
           </ul>
           <ul className={classes.menu}>
             <li>
-              <Link href='/'>Our Services</Link>
+              <Link href='/services'>Our Services</Link>
             </li>
             {/* <li>
               <Link href='/'>Home</Link>
@@ -61,7 +61,7 @@ const Footer = () => {
           </ul>
           <ul className={classes.menu}>
             <li>
-              <Link href='/'>Media Hub</Link>
+              <Link href='/media-hub'>Media Hub</Link>
             </li>
             {/* <li>
               <Link href='/'>Home</Link>
@@ -75,7 +75,7 @@ const Footer = () => {
           </ul>
           <ul className={`${classes.menu} ${classes.socials}`}>
             <li>
-              <Link href='/'>Get in Touch</Link>
+              <span>Get in Touch</span>
             </li>
             <ul className={classes.socials}>
               <li>

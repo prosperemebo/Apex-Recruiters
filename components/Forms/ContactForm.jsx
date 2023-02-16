@@ -1,8 +1,11 @@
 import { useFormik } from 'formik';
 import classes from './Forms.module.scss';
 import * as Yup from 'yup';
+import { useRef } from 'react';
 
 const ContactForm = () => {
+  const form = useRef();
+
   const formik = useFormik({
     initialValues: {
       fullName: '',
@@ -11,7 +14,9 @@ const ContactForm = () => {
       subject: '',
       message: '',
     },
-    onSubmit: () => {},
+    onSubmit: () => {
+      form.current.submit();
+    },
     validationSchema: Yup.object({
       fullName: Yup.string().required('Please enter your Full Name!'),
       subject: Yup.string().required('Please enter a subject!'),
@@ -24,7 +29,17 @@ const ContactForm = () => {
   });
 
   return (
-    <form className={classes.main} onSubmit={formik.handleSubmit}>
+    <form
+      className={classes.main}
+      onSubmit={formik.handleSubmit}
+      action={
+        'mailto:contact@apexrecruiterltd.com?subject=Web Contact Form Mail: ' +
+        formik.values.subject
+      }
+      method='post'
+      enctype='text/plain'
+      ref={form}
+    >
       <div className='apx-fields'>
         <div className='apx-field'>
           <input
@@ -111,7 +126,9 @@ const ContactForm = () => {
           ) : null}
         </div>
       </div>
-      <button className='btn btn-primary'>Submit</button>
+      <button type='submit' className='btn btn-primary'>
+        Submit
+      </button>
     </form>
   );
 };

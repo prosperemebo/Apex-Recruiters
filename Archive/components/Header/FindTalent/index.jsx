@@ -3,8 +3,17 @@ import classes from '../Header.module.scss';
 import Image from 'next/image';
 
 import composition from '../../../assets/images/file.png';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const Header = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (router.query.message) toast(router.query.message);
+  }, [router]);
+
   return (
     <header
       className={`${classes.header} ${classes.green} ${classes.center} ${classes.medium}`}
